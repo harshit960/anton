@@ -227,7 +227,7 @@ const Hero = () => {
                       placeholder="Message Anton..." 
                       className="flex-1 bg-[#1D1D1F] rounded-full px-4 py-3 outline-none text-base focus:ring-1 focus:ring-blue-500 border border-gray-800 text-gray-300" 
                     />
-                    <button className="bg-[#0066CC] text-white p-3 rounded-full ml-3 hover:bg-[#0077ED] transition duration-200">
+                    <button className="bg-[#0066CC] text-white p-3 rounded-full ml-3 hover:bg-[#7eb0e3] transition duration-200">
                       <IoSend className="w-5 h-5" />
                     </button>
                   </div>
