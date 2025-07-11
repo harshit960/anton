@@ -22,4 +22,3 @@ const connectToGram = async () => {
 module.exports = {
   connectToGram, client
 };
-//   export default {connectToGram}

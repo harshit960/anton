@@ -63,8 +63,6 @@ const processIncomingMessage = async (e) => {
             ;
         console.log(lastMessages);
         
-        // const lastMessages = []
-        
         try {
             const res = await fetch(process.env.LLAMA_URL + '/api/query', {
                 method: 'POST',

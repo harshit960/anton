@@ -1,9 +1,3 @@
-// import { Api, TelegramClient } from "telegram";
-// import  StringSession  from "telegram/sessions";
-// import input from "input"; // npm i input
-// Example session string - replace with your own from session.save()
-// const stringSession = new StringSession("YOUR_SESSION_STRING_HERE");
-
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');

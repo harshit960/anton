@@ -32,14 +32,6 @@ async function localCSV(query) {
       // 5. Run retrieval
     const nodes = await retriever.retrieve(query);
     console.log(nodes);
-    
-    // const document = new Document({ text: "wtfff bro, i wanna be crazy", id_: "essay" });
-
-    // Load and index documents
-    // const index = await VectorStoreIndex.fromDocuments([document]);
-    // console.log(index);
-    // console.log(Object.values(index.vectorStores.TEXT.data.embeddingDict)[0]);
-
 }
 
 export default { localCSV };
