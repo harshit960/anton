@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --background: #000000;
+  --foreground: rgba(255, 255, 255, 0.92);
+  --accent: rgba(128, 128, 128, 0.5);
+  --primary: #0066CC;
+  --primary-light: #0077ED;
+  --secondary: #111111;
+  --tertiary: #1D1D1F;
+  --text-primary: #F5F5F7;
+  --text-secondary: #86868B;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-image: 
+    linear-gradient(rgba(15, 15, 15, 0.8) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15, 15, 15, 0.8) 1px, transparent 1px),
+    radial-gradient(circle at 50% 0%, rgba(50, 50, 150, 0.08), transparent 50%),
+    radial-gradient(circle at 0% 50%, rgba(50, 100, 200, 0.05), transparent 50%);
+  background-size: 60px 60px, 60px 60px, 100% 100%, 100% 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.glass {
+  background: rgba(25, 25, 25, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+.section-spacing {
+  padding: 9rem 0;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, rgba(40, 40, 40, 0.5) 0%, rgba(0, 0, 0, 0) 70%);
+}
+
+.container {
+  max-width: 1440px !important;
+  padding-left: 2.5rem !important;
+  padding-right: 2.5rem !important;
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 4rem !important;
+    padding-right: 4rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    padding-left: 6rem !important;
+    padding-right: 6rem !important;
+  }
+}
+
+.primary-button {
+  background-color: var(--primary);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+  background-color: var(--primary-light);
+}
+
+.secondary-button {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.apple-card {
+  background: linear-gradient(to bottom right, rgba(37, 99, 235, 0.05), transparent);
+  backdrop-filter: blur(100px);
+  -webkit-backdrop-filter: blur(100px);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.apple-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
