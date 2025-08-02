@@ -3,6 +3,7 @@ import { Settings } from "llamaindex";
 import { formatDistanceToNow, format } from "date-fns";
 import { TextNode, getResponseSynthesizer, responseModeSchema } from "llamaindex";
 import { PROMPTS } from './prompts.js';
+import createPrompt from './createPrompt.js';
 
 import dotenv from "dotenv";
 import { generateChatResponse } from "./vertexAi.js";
@@ -39,7 +40,8 @@ async function queryEngine(index, context, query, aiPreference, lastMessages, to
 
     const PROMPT = PROMPTS.AANYA_SYSTEM_PROMPT(formattedTime, context, userData, msgs, textWithScores);
 
-    const res = await generateChatResponse(query, PROMPT,lastMessages)
+    const res = await createPrompt.createChain(query + PROMPT + lastMessages, index);
+    // const res = await generateChatResponse(query, PROMPT,lastMessages)
     console.log(res);
 
     return res

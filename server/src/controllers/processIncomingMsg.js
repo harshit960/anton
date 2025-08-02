@@ -98,6 +98,7 @@ const processIncomingMessage = async (e) => {
             
             }
         } catch (error) {
+            await sendTelegramMessage(messageData.chatId, "Sorryyy! 503", 0);
             console.error('Error processing message:', error);
         }
         // Check if message is a command
@@ -127,9 +128,15 @@ const processIncomingMessage = async (e) => {
 
         // return message;
     } catch (error) {
-
+        const msg = e.message || e.originalUpdate;
+        const messageData = {
+            chatId: msg.peerId?.userId?.toString() || msg.userId?.toString() || Math.random().toString(36).substr(2, 9),
+        };
+        await sendTelegramMessage(messageData.chatId, "Sorryyy! 500", 0);
+        console.log(messageData.chatId);
+        
         console.error('Error processing message:', error);
-        throw error;
+        // throw error;
     }
 };
 

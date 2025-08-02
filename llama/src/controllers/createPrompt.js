@@ -1,4 +1,4 @@
-import { Gemini, GEMINI_MODEL, GeminiVertexSession } from "@llamaindex/google";
+import { Gemini, GEMINI_MODEL } from "@llamaindex/google";
 import { TextNode, getResponseSynthesizer, responseModeSchema } from "llamaindex";
 import { Settings } from "llamaindex";
 import { PROMPTS } from './prompts.js';
@@ -8,7 +8,7 @@ import { formatDistanceToNow } from "date-fns";
 dotenv.config();
 
 Settings.llm = new Gemini({
-    model: GEMINI_MODEL.GEMINI_2_5_FLASH_PREVIEW,
+    model: GEMINI_MODEL.GEMINI_2_5_FLASH_PREVIEW ,
     apiKey: process.env.GOOGLE_API_KEY,
 });
 
